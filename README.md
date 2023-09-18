@@ -1,2 +1,1 @@
-alu-shell
-working with shell
+edit readme
