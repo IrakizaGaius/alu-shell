@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# Open the /etc/passwd file for reading
+#Open the /etc/passwd file for reading
 exec 3< /etc/passwd
 
 # Set the IFS variable to ":" to split each line into fields
 IFS=":"
 
 # Loop through each line of the file
-while read -u 3 username password uid gid info home shell
+while read -u 3 -r username password uid gid info home shell
 do
   # Extract the user's full name from the info field
   name=$(echo "$info" | cut -d, -f1)
